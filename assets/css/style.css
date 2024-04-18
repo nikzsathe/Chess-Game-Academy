@@ -1,10 +1,3 @@
-/**
-* Template Name: Dewi
-* Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -1601,7 +1594,7 @@ section {
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
+.contact .php-email {
   box-shadow: 0 0 30px #EB740A;
   padding: 30px;
 }
