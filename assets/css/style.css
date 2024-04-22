@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -6,16 +5,167 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
   background-color: #121212;
+  
+}
+/* 
+  The code snippet defines the styles for a CSS class called `.extra-head`. 
+  It sets the display to flex, aligns the content to the center, and sets the text color to white. 
+  The background color is set to a semi-transparent dark blue, and the height is set to 50 pixels. 
+  The class also contains a nested selector for `p` elements inside `.extra-head`, which sets the margin-bottom to 10 pixels. 
+  There is also a media query that applies different styles for screens with a maximum width of 768 pixels, 
+  reducing the margin-bottom to 5 pixels for the `p` elements.
+*/
+
+.extra-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  background: rgba(21, 34, 43, 0.85); /* Just for demonstration */
+  height: 50px; /* Just for demonstration */
 }
 
+.con {
+  color: #ffffff;
+}
+
+.extra-head p {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .extra-head p {
+    margin-bottom: 5px; /* Adjust this value for smaller screens */
+  }
+}
 a {
   color: #EB740A;
   text-decoration: none;
 }
-
+#message{
+  color: #ffffff;
+}
 a:hover {
   color: #EB740A;
   text-decoration: none;
+}/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #121212;
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInFromRight 2s ease-out forwards;
+}
+
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+.con{
+  margin-top: 100px;
+}
+.hide{
+  color: #121212;
 }
 
 h1,
@@ -300,8 +450,11 @@ text-align: center;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  margin-top: 0;
 }
-
+.ben-card{
+  color: #ffffff;
+}
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(21, 34, 43, 0.85);
@@ -600,7 +753,7 @@ text-align: center;
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/chess_bg.png")  center;
+  background: url("../img/pages/chess_bg.webp")  center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -691,6 +844,16 @@ text-align: center;
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
+  }
+}
+
+@media (min-width: 768px) {
+  #hero {
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-position: center center; /* Horizontally and vertically centers the image */
+    background-size: cover; /* Ensures the background covers the entire element */
+    background-image: url("../img/pages/chess_bg.webp"); /* Example path to your background image */
+    background-repeat: no-repeat;
   }
 }
 
@@ -1599,7 +1762,7 @@ section {
   padding: 30px;
 }
 
-/* .contact .php-email-form .error-message {
+.contact .php-email .error-message {
   display: none;
   color: #fff;
   background: #EB740A;
@@ -1608,11 +1771,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .php-email .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1621,14 +1784,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .php-email .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .php-email .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1638,7 +1801,7 @@ section {
   border: 3px solid #18d26e;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
-} */
+}
 
 .contact .php-email input,
 .contact .php-email textarea {
@@ -1681,11 +1844,11 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-emailbutton[type=submit]:hover {
+.contact .php-email button[type=submit]:hover {
   background: #ff5e31;
 }
 
-/* @keyframes animate-loading {
+@keyframes animate-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -1693,7 +1856,7 @@ section {
   100% {
     transform: rotate(360deg);
   }
-} */
+}
 
 /*--------------------------------------------------------------
 # Breadcrumbs
