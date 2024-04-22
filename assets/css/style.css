@@ -811,6 +811,8 @@ text-align: center;
   background: #EB740A;
   border: 2px solid #EB740A;
   border-radius: 14px;
+  flex: 1 1 auto;
+  margin: 5px;
 }
 
 #hero .btn-get-started:hover {
