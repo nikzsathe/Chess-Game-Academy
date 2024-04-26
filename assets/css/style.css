@@ -1,10 +1,4 @@
-/**
-* Template Name: Dewi
-* Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -1773,12 +1767,12 @@ section {
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
+.contact .php-email {
   box-shadow: 0 0 30px #EB740A;
   padding: 30px;
 }
 
-.contact .php-email-form .error-message {
+.contact .php-email .error-message {
   display: none;
   color: #fff;
   background: #EB740A;
@@ -1787,11 +1781,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .php-email .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1800,14 +1794,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .php-email .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .php-email .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1819,39 +1813,39 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .php-email input,
+.contact .php-email textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
   background-color: #121212;
 }
-.contact .php-email-form textarea::placeholder {
+.contact .php-email textarea::placeholder {
   color: white; /* Set placeholder color to white */
 }
-.contact .php-email-form input::placeholder {
+.contact .php-email input::placeholder {
   color: white; /* Set placeholder color to white */
 }
-.contact .php-email-form input {
+.contact .php-email input {
   color: white; /* Set input text color to white */
 }
 
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .php-email input:focus,
+.contact .php-email textarea:focus {
   border-color: #EB740A;
 }
 
-.contact .php-email-form input {
+.contact .php-email input {
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.contact .php-email textarea {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email button[type=submit] {
   background: #EB740A;
   border: 0;
   padding: 10px 24px;
@@ -1860,7 +1854,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email button[type=submit]:hover {
   background: #ff5e31;
 }
 
