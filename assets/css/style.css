@@ -1,3 +1,5 @@
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -5,33 +7,21 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
   background-color: #121212;
-  
 }
-/* 
-  The code snippet defines the styles for a CSS class called `.extra-head`. 
-  It sets the display to flex, aligns the content to the center, and sets the text color to white. 
-  The background color is set to a semi-transparent dark blue, and the height is set to 50 pixels. 
-  The class also contains a nested selector for `p` elements inside `.extra-head`, which sets the margin-bottom to 10 pixels. 
-  There is also a media query that applies different styles for screens with a maximum width of 768 pixels, 
-  reducing the margin-bottom to 5 pixels for the `p` elements.
-*/
-
 .extra-head {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Aligns items horizontally */
+  align-items: center; /* Aligns items vertically */
+  height: 40px;
   color: #ffffff;
-  text-align: center;
-  background: rgba(21, 34, 43, 0.85); /* Just for demonstration */
-  height: 50px; /* Just for demonstration */
+  text-align: center; /* Aligns text within flex container */
 }
 
-.con {
+.con{
   color: #ffffff;
 }
-
 .extra-head p {
-  margin-bottom: 10px; /* Adjust this value as needed */
+  margin-bottom: 5px; /* Adjust this value as needed */
 }
 
 @media screen and (max-width: 768px) {
@@ -40,6 +30,7 @@ body {
   }
 }
 a {
+  font-size: medium;
   color: #EB740A;
   text-decoration: none;
 }
@@ -450,7 +441,7 @@ text-align: center;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
-  margin-top: 0;
+  margin-top: 20px;
 }
 .ben-card{
   color: #ffffff;
@@ -746,6 +737,24 @@ text-align: center;
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+.if-im{
+  height: 100px;
+  width: 100px
+}
+.small-image {
+  max-width: 500px; /* Ensure image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure proper block-level display */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .small-image {
+      max-width: 100%; /* Adjust as needed */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -797,7 +806,20 @@ text-align: center;
   margin-bottom: 50px;
   font-size: 24px;
 }
-
+.hero-btn{
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px 35px 10px 35px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #EB740A;
+  border: 2px solid #EB740A;
+  border-radius: 14px;
+}
 #hero .btn-get-started {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -811,8 +833,6 @@ text-align: center;
   background: #EB740A;
   border: 2px solid #EB740A;
   border-radius: 14px;
-  flex: 1 1 auto;
-  margin: 5px;
 }
 
 #hero .btn-get-started:hover {
@@ -848,7 +868,6 @@ text-align: center;
     background-attachment: fixed;
   }
 }
-
 
 @media (max-width: 768px) {
   #hero h1 {
@@ -1568,6 +1587,15 @@ section {
   bottom: 0;
 }
 
+.achievement-text {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1831,10 +1859,12 @@ section {
 .contact .php-email button[type=submit] {
   background: #EB740A;
   border: 0;
-  padding: 10px 24px;
+  font-size: medium;
+  padding: 10px 30px;
   color: #121212;
   transition: 0.4s;
   border-radius: 4px;
+  margin-top: 20px;
 }
 
 .contact .php-email button[type=submit]:hover {
@@ -1850,6 +1880,68 @@ section {
     transform: rotate(360deg);
   }
 }
+
+
+*--------------------------------------------------------------
+# Our Branches Section
+--------------------------------------------------------------*/
+.branches {
+  padding: 60px 0;
+  /* background: #f9f9f9; */
+}
+
+.branches .section-title h2 {
+  font-weight: bold;
+  color: #EB740A;
+}
+
+.branch-box {
+  /* background: #444444; */
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px #EB740A;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.branch-box i {
+  font-size: 40px;
+  color: #EB740A;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.branch-box h4 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.branch-box p {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.branch-box .branch-link {
+  display: inline-block;
+  font-weight: 500;
+  color: #EB740A;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.branch-box .branch-link:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.branch-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -2059,4 +2151,3 @@ section {
   height: 300px;
   width: 300px
 }
-
